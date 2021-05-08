@@ -1,0 +1,20 @@
+{
+  "name": "caesar-cipher-cli",
+  "version": "1.0.0",
+  "description": "cipher cli tool",
+  "main": "index.js",
+  "scripts": {
+    "encode": "node index.js -a encode",
+    "decode": "node index.js -a decode"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WonderLuc/Caesar-cipher-CLI.git"
+  },
+  "author": "wonderluc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WonderLuc/Caesar-cipher-CLI/issues"
+  },
+  "homepage": "https://github.com/WonderLuc/Caesar-cipher-CLI#readme"
+}

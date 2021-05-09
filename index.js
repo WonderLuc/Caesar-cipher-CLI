@@ -17,7 +17,6 @@ setTimeout( () => {
         process.exit(500);
       }
       console.log('done');
-      process.exit(200);
     }
   )
 },10);

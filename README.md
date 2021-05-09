@@ -80,10 +80,10 @@ There are 4 arguments:
    ```bash
    $ node index.js --action encode --shift 7 --input "./input.txt" --output "./output.txt"
    ```
-   > plain.txt
+   > input.txt
    > `This is secret. Message about "_" symbol!`
    
-   > encoded.txt
+   > output.txt
    > `Aopz pz zljyla. Tlzzhnl hivba "_" zftivs!`
    
    2. _-a (--action)_ is **decode**  
@@ -93,10 +93,10 @@ There are 4 arguments:
    $ node index.js --action decode --shift 7 --input "./input.txt" --output "./output.txt"
    ```
    
-   > encoded.txt
+   > input.txt
    > `Aopz pz zljyla. Tlzzhnl hivba "_" zftivs!`
    
-   > plain.txt
+   > output.txt
    > `This is secret. Message about "_" symbol!`
    
    3. _Negative shift handling_
@@ -105,10 +105,10 @@ There are 4 arguments:
    $ node index.js --action encode --shift -1 --input "./input.txt" --output "./output.txt"
    ```
    
-   > plain.txt
+   > input.txt
    > `This is secret. Message about "_" symbol!`
    
-   > encoded.txt
+   > output.txt
    > `Sghr hr rdbqds. Ldrrzfd zants "_" rxlank!`
    
    

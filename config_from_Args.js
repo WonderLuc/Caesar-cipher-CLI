@@ -64,7 +64,7 @@ function missingArgErr () {
 }
 async function checkArgs () {
   await parseArgs();
-  if (!(config.action && config.shift)){
+  if (!(config.action && (typeof config.shift === 'number'))){
     missingArgErr();
   }  
 }

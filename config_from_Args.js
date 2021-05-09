@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const defaultConfig = require('./default_config.js');
 
 let args = process.argv.slice(2);
 let config = {
@@ -8,6 +9,10 @@ let config = {
   inputFile: undefined,
   outputFile: undefined
 }
+if (args.length < 4) {
+  config = {...defaultConfig}
+}
+
 function parseArgs() {
   args.forEach((arg, i) => {
     if (arg[0] !== '-') {

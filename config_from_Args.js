@@ -10,7 +10,7 @@ let config = {
 }
 function parseArgs() {
   args.forEach((arg, i) => {
-    if (i%2 != 0) {
+    if (arg[0] !== '-') {
       return ;
     }
     let name = arg;
@@ -25,6 +25,9 @@ function parseArgs() {
     }
     if (name === '-i' || name === '--input') {
       let filePath;
+      if (!value || value[0] === '-') {
+        return;
+      }
       try{
         filePath= path.resolve(__dirname, value);
       }catch(err){
@@ -41,6 +44,9 @@ function parseArgs() {
     }
     if (name === '-o' || name === '--output') {
       let filePath;
+      if (!value || value[0] === '-') {
+        return;
+      }
       try{
         filePath= path.resolve(__dirname, value);
       }catch(err){
@@ -48,7 +54,7 @@ function parseArgs() {
       }    
       fs.access(filePath, (err) => {
         if (err) {
-          process.stderr.write('No such file. Check a path');
+          process.stderr.write('No such file for output. Check a path');
           process.exit(404);
         }
         config.outputFile = filePath;
